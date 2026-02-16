@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Proyecto</title>
+<title>Asociación por el Debido Proceso</title>
 
 <style>
 * {
@@ -14,65 +14,87 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
 }
 
 header {
+  background: #1f2d3d;
+  color: white;
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px 20px;
-}
-
-header img {
-  width: 120px;
-  border-radius: 20px;
-  margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
 }
 
 header p {
-  opacity: 0.8;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 1200px;
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #357abd;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
   margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #1f2d3d;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
 }
 
 .videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.video-card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-.video-card:hover {
-  transform: translateY(-10px);
+  gap: 25px;
 }
 
 iframe {
   width: 100%;
   height: 250px;
+  border-radius: 12px;
   border: none;
 }
 
-footer {
+.contact-info {
   text-align: center;
-  padding: 40px;
-  opacity: 0.6;
+}
+
+footer {
+  background: #1f2d3d;
+  color: white;
+  text-align: center;
+  padding: 30px;
   font-size: 0.9rem;
 }
 </style>
@@ -81,32 +103,67 @@ footer {
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo">
-  <h1>Mi Sitio Profesional</h1>
-  <p>Una prueba con diseño moderno y videos integrados</p>
+  <h1>Asociación por el Debido Proceso</h1>
+  <p>
+    Brindamos acompañamiento legal y orientación social a hombres que enfrentan acusaciones falsas, 
+    promoviendo el respeto al debido proceso, la presunción de inocencia y la dignidad humana.
+  </p>
+  <a href="#contacto" class="button">Solicitar Orientación</a>
 </header>
 
-<section class="section">
+<section>
+  <h2 class="section-title">Quiénes Somos</h2>
+  <div class="card">
+    <p>
+      Somos una asociación civil comprometida con la defensa de los derechos fundamentales. 
+      Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional a 
+      personas que enfrentan procesos legales derivados de acusaciones falsas.
+    </p>
+    <p>
+      Actuamos desde una postura institucional, respetuosa y apegada a la legalidad, 
+      promoviendo soluciones basadas en el Estado de Derecho.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Nuestro Acompañamiento</h2>
+  <div class="card">
+    <ul>
+      <li>Orientación inicial sobre procesos legales</li>
+      <li>Canalización con profesionales especializados</li>
+      <li>Acompañamiento emocional y contención</li>
+      <li>Información clara sobre derechos y obligaciones</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Material Informativo</h2>
   <div class="videos">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
+    <iframe src="https://www.youtube.com/embed/l482T0yNkeo"></iframe>
+  </div>
+</section>
 
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
-    </div>
-
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/l482T0yNkeo"></iframe>
-    </div>
-
+<section id="contacto">
+  <h2 class="section-title">Contacto</h2>
+  <div class="card contact-info">
+    <p><strong>Correo:</strong> contacto@asociacion.org</p>
+    <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
+    <p>
+      Toda comunicación será tratada con estricta confidencialidad.
+    </p>
   </div>
 </section>
 
 <footer>
-  © 2026 - Mi Proyecto
+  © 2026 Asociación por el Debido Proceso | Todos los derechos reservados
 </footer>
 
 </body>
 </html>
+
+
+
