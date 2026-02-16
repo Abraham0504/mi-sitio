@@ -17,41 +17,80 @@ body {
   line-height: 1.6;
   background-color: #f4f6f8;
   color: #333;
+  padding-top: 90px;
 }
 
-header {
+/* NAVBAR */
+header.navbar {
   background: #1f2d3d;
   color: white;
-  padding: 80px 20px;
-  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-header p {
-  max-width: 700px;
+.nav-container {
+  max-width: 1200px;
   margin: auto;
-  opacity: 0.9;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 30px;
-  background: #4a90e2;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.site-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+nav a {
   color: white;
   text-decoration: none;
-  border-radius: 30px;
+  margin-left: 25px;
+  font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.button:hover {
-  background: #357abd;
+nav a:hover {
+  opacity: 0.7;
 }
 
+.nav-button {
+  background: #4a90e2;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px 70px;
+  background: #e9eef3;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1f2d3d;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* GENERAL */
 section {
   padding: 70px 20px;
   max-width: 1100px;
@@ -71,6 +110,10 @@ section {
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 .videos {
@@ -102,32 +145,50 @@ footer {
 
 <body>
 
-<header>
-  <img src="logo.png" alt="Logo Asociación" class="logo">
-  <h1>Asociación por el Debido Proceso</h1>
-  <p>
-    Brindamos acompañamiento legal y orientación social a hombres que enfrentan acusaciones falsas, 
-    promoviendo el respeto al debido proceso, la presunción de inocencia y la dignidad humana.
-  </p>
-  <a href="#contacto" class="button">Solicitar Orientación</a>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo Asociación" class="logo">
+      <span class="site-name">Asociación por el Debido Proceso</span>
+    </div>
+
+    <nav>
+      <a href="#quienes">Quiénes Somos</a>
+      <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#videos">Material</a>
+      <a href="#contacto" class="nav-button">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<section>
+<!-- HERO -->
+<section class="hero">
+  <h1>Asociación por el Debido Proceso</h1>
+  <p>
+    Brindamos acompañamiento legal y orientación social a hombres que enfrentan acusaciones falsas,
+    promoviendo el respeto al debido proceso, la presunción de inocencia y la dignidad humana.
+  </p>
+</section>
+
+<!-- QUIENES SOMOS -->
+<section id="quienes">
   <h2 class="section-title">Quiénes Somos</h2>
   <div class="card">
     <p>
-      Somos una asociación civil comprometida con la defensa de los derechos fundamentales. 
-      Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional a 
+      Somos una asociación civil comprometida con la defensa de los derechos fundamentales.
+      Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional a
       personas que enfrentan procesos legales derivados de acusaciones falsas.
     </p>
     <p>
-      Actuamos desde una postura institucional, respetuosa y apegada a la legalidad, 
+      Actuamos desde una postura institucional, respetuosa y apegada a la legalidad,
       promoviendo soluciones basadas en el Estado de Derecho.
     </p>
   </div>
 </section>
 
-<section>
+<!-- ACOMPAÑAMIENTO -->
+<section id="acompanamiento">
   <h2 class="section-title">Nuestro Acompañamiento</h2>
   <div class="card">
     <ul>
@@ -139,16 +200,18 @@ footer {
   </div>
 </section>
 
-<section>
+<!-- VIDEOS -->
+<section id="videos">
   <h2 class="section-title">Material Informativo</h2>
   <div class="videos">
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
     <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
     <iframe src="https://www.youtube.com/embed/l482T0yNkeo"></iframe>
-    <iframe src="https://www.youtube.com/watch?v=P1-891_aOKY&list=RDP1-891_aOKY&start_radio=1"></iframe>
+    <iframe src="https://www.youtube.com/embed/P1-891_aOKY"></iframe>
   </div>
 </section>
 
+<!-- CONTACTO -->
 <section id="contacto">
   <h2 class="section-title">Contacto</h2>
   <div class="card contact-info">
@@ -166,9 +229,4 @@ footer {
 
 </body>
 </html>
-
-
-
-
-
 
