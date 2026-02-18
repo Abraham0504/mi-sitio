@@ -3,230 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asociación por el Debido Proceso</title>
+<title>Asociación de Víctimas</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f6f8;
-  color: #333;
-  padding-top: 90px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
 }
 
-/* NAVBAR */
-header.navbar {
-  background: #1f2d3d;
-  color: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+header {
+    background: #1f2a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  height: 45px;
-}
-
-.site-name {
-  font-weight: 600;
-  font-size: 1.05rem;
+nav {
+    background: #2d3e60;
+    padding: 10px;
+    text-align: center;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 0.95rem;
-  transition: 0.3s;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a:hover {
-  opacity: 0.7;
-}
-
-.nav-button {
-  background: #4a90e2;
-  padding: 8px 18px;
-  border-radius: 20px;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px 70px;
-  background: #e9eef3;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #1f2d3d;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: auto;
-}
-
-/* GENERAL */
 section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: auto;
+    padding: 60px 20px;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #1f2d3d;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #1f2a40;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  margin-bottom: 30px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-.videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-iframe {
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-  border: none;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .contact-info {
-  text-align: center;
-}
-
-footer {
-  background: #1f2d3d;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
+    text-align: center;
 }
 </style>
-</head>
 
+<!-- Brevo Styles -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+<style>
+#sib-container input::placeholder {
+    text-align: left;
+    color: #c0ccda;
+}
+</style>
+
+</head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo Asociación" class="logo">
-      <span class="site-name">Asociación por el Debido Proceso</span>
-    </div>
-
-    <nav>
-      <a href="#quienes">Quiénes Somos</a>
-      <a href="#acompanamiento">Acompañamiento</a>
-      <a href="#videos">Material</a>
-      <a href="#contacto" class="nav-button">Contacto</a>
-    </nav>
-  </div>
+<header>
+    <h1>Asociación de Víctimas</h1>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Asociación por el Debido Proceso</h1>
-  <p>
-    Brindamos acompañamiento legal y orientación social a hombres que enfrentan acusaciones falsas,
-    promoviendo el respeto al debido proceso, la presunción de inocencia y la dignidad humana.
-  </p>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- INICIO -->
+<section id="inicio">
+    <h2 class="section-title">Bienvenido</h2>
+    <div class="card">
+        <p>
+            Nuestro compromiso es brindar apoyo, orientación y acompañamiento
+            a las personas que han sido víctimas.
+        </p>
+    </div>
 </section>
 
-<!-- QUIENES SOMOS -->
-<section id="quienes">
-  <h2 class="section-title">Quiénes Somos</h2>
-  <div class="card">
-    <p>
-      Somos una asociación civil comprometida con la defensa de los derechos fundamentales.
-      Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional a
-      personas que enfrentan procesos legales derivados de acusaciones falsas.
-    </p>
-    <p>
-      Actuamos desde una postura institucional, respetuosa y apegada a la legalidad,
-      promoviendo soluciones basadas en el Estado de Derecho.
-    </p>
-  </div>
-</section>
-
-<!-- ACOMPAÑAMIENTO -->
-<section id="acompanamiento">
-  <h2 class="section-title">Nuestro Acompañamiento</h2>
-  <div class="card">
-    <ul>
-      <li>Orientación inicial sobre procesos legales</li>
-      <li>Canalización con profesionales especializados</li>
-      <li>Acompañamiento emocional y contención</li>
-      <li>Información clara sobre derechos y obligaciones</li>
-    </ul>
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos">
-  <h2 class="section-title">Material Informativo</h2>
-  <div class="videos">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
-    <iframe src="https://www.youtube.com/embed/l482T0yNkeo"></iframe>
-    <iframe src="https://www.youtube.com/embed/P1-891_aOKY"></iframe>
-  </div>
+<!-- NOSOTROS -->
+<section id="nosotros">
+    <h2 class="section-title">Nosotros</h2>
+    <div class="card">
+        <p>
+            Somos una organización dedicada a la defensa, orientación y apoyo
+            de víctimas.
+        </p>
+    </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-  <h2 class="section-title">Contacto</h2>
-  <div class="card contact-info">
-    <p><strong>Correo:</strong> contacto@asociacion.org</p>
-    <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
-    <p>
-      Toda comunicación será tratada con estricta confidencialidad.
-    </p>
-  </div>
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="card" style="max-width:600px;">
+
+        <h3 style="text-align:center;">Déjanos tus datos</h3>
+        <p style="text-align:center;">
+            Nos pondremos en contacto contigo de manera confidencial.
+        </p>
+
+        <div class="sib-form">
+            <div id="sib-form-container" class="sib-form-container">
+                <div id="sib-container" class="sib-container--large sib-container--vertical">
+
+                    <form id="sib-form" method="POST"
+                        action="https://5ac3cbe7.sibforms.com/serve/MUIFAF0KiFczH0gT8_hHNmUG61lw1H2aj3xChyE7BPCFAB3zbQx1kcGunXWeFaEuZh1ECEPoa3XPFxrVaBaBJ4X6VFsSBzs_IXUFxB4V2mgBlGkJop2kKhftzVdSR-QWAm6xjKH77CBNmhXoa2PNCLddIvkfjNPFLPdFpZEnn4XrcrmSUjEi6v8tawbUnkrST6iVKmbtRnxlz9lrlA=="
+                        data-type="subscription">
+
+                        <div style="padding: 10px 0;">
+                            <input type="email" name="EMAIL"
+                                placeholder="Correo electrónico"
+                                required
+                                style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc;">
+                        </div>
+
+                        <div style="text-align:center; padding: 15px 0;">
+                            <button type="submit"
+                                style="background:#1f2a40; color:white; padding:12px 30px; border:none; border-radius:25px; font-weight:600; cursor:pointer;">
+                                Enviar
+                            </button>
+                        </div>
+
+                        <input type="hidden" name="locale" value="es">
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card contact-info">
+        <p><strong>Correo:</strong> contacto@asociacion.org</p>
+        <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
+        <p>Toda comunicación será tratada con estricta confidencialidad.</p>
+    </div>
+
 </section>
 
-<footer>
-  © 2026 Asociación por el Debido Proceso | Todos los derechos reservados
-</footer>
+<!-- Brevo Scripts -->
+<script>
+window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío.";
+window.GENERIC_INVALID_MESSAGE = "La información no es válida.";
+window.translation = {
+    common: {
+        selectedList: '{quantity} lista seleccionada',
+        selectedLists: '{quantity} listas seleccionadas'
+    }
+};
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
+
 
