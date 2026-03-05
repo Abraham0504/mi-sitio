@@ -111,12 +111,11 @@
       gap: 25px;
     }
 
-    iframe {
-      width: 100%;
-      height: 250px;
-      border-radius: 12px;
-      border: none;
-    }
+    video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
     .contact-info {
       text-align: center;
@@ -130,6 +129,33 @@
       font-size: 0.9rem;
     }
   </style>
+
+  .hero-image {
+  position: relative;
+  height: 100vh;
+  background: url("hero.jpg") center center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  font-weight: 600;
+}
 
   <style>
   @font-face {
@@ -193,12 +219,12 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Asociación por el Debido Proceso</h1>
-  <p>
-    Brindamos acompañamiento legal y orientación social a hombres que enfrentan acusaciones falsas,
-    promoviendo el respeto al debido proceso, la presunción de inocencia y la dignidad humana.
-  </p>
+<section class="hero-image">
+  <div class="hero-overlay">
+    <h1>
+      Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.
+    </h1>
+  </div>
 </section>
 
 <!-- QUIÉNES SOMOS -->
@@ -233,12 +259,24 @@
 <!-- VIDEOS -->
 <section id="videos">
   <h2 class="section-title">Material Informativo</h2>
-  <div class="videos">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
-    <iframe src="https://www.youtube.com/embed/l482T0yNkeo"></iframe>
-    <iframe src="https://www.youtube.com/embed/P1-891_aOKY"></iframe>
-  </div>
+ <div class="videos">
+  <video controls>
+    <source src="video1.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <video controls>
+    <source src="video2.mp4" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="video3.mp4" type="video/mp4">
+  </video>
+
+  <video controls>
+    <source src="video4.mp4" type="video/mp4">
+  </video>
+</div>
 </section>
 
 <!-- CONTACTO -->
@@ -310,6 +348,7 @@
 
 </body>
 </html>
+
 
 
 
