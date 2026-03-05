@@ -154,6 +154,40 @@
   max-width: 900px;
   font-weight: 600;
 }
+
+    .donativos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.donativo-box {
+  background: #f9fbfd;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.donativo-box h3 {
+  margin-bottom: 15px;
+  color: #1f2d3d;
+}
+
+.donar-boton {
+  display: inline-block;
+  margin-top: 15px;
+  background: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.donar-boton:hover {
+  background: #357abd;
+}
   </style>
 
  
@@ -215,6 +249,7 @@
       <a href="#acompanamiento">Acompañamiento</a>
       <a href="#videos">Material</a>
       <a href="#contacto" class="nav-button">Contacto</a>
+      <a href="#donativos">Donativos</a>
     </nav>
   </div>
 </header>
@@ -256,7 +291,41 @@
     </ul>
   </div>
 </section>
+  
+<!-- DONATIVOS -->
+<section id="donativos">
+  <h2 class="section-title">Donativos</h2>
 
+  <div class="card">
+    <p style="text-align:center; margin-bottom:25px;">
+      Tu apoyo nos permite continuar brindando orientación y acompañamiento 
+      a personas que enfrentan procesos legales complejos.  
+      Cada contribución fortalece nuestra labor institucional.
+    </p>
+
+    <div class="donativos-grid">
+
+      <div class="donativo-box">
+        <h3>Transferencia bancaria</h3>
+        <p><strong>Banco:</strong> BBVA</p>
+        <p><strong>Cuenta:</strong> 0123456789</p>
+        <p><strong>CLABE:</strong> 012345678901234567</p>
+      </div>
+
+      <div class="donativo-box">
+        <h3>Donación digital</h3>
+        <p>Puedes realizar tu donación mediante plataforma digital segura.</p>
+        <a href="#" class="donar-boton">Donar ahora</a>
+      </div>
+
+    </div>
+
+    <p style="margin-top:30px; text-align:center; font-size:0.9rem;">
+      La información bancaria es confidencial. Si requieres comprobante, 
+      escríbenos a contacto@asociacion.org
+    </p>
+  </div>
+</section>
 <!-- VIDEOS -->
 <section id="videos">
   <h2 class="section-title">Material Informativo</h2>
@@ -344,6 +413,7 @@
 
 </body>
 </html>
+
 
 
 
