@@ -315,6 +315,31 @@ box-shadow:0 10px 20px rgba(0,0,0,0.15);
   font-weight:600;
   display:inline-block;
 }
+    .hero-image{
+position:relative;
+height:90vh;
+background:url("hero.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.5);
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-overlay h1{
+color:white;
+font-size:2.8rem;
+max-width:900px;
+}
     .impact-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -354,6 +379,25 @@ box-shadow:0 10px 25px rgba(0,0,0,0.08);
 font-size:2.5rem;
 color:#4a90e2;
 margin-bottom:10px;
+}
+
+    .home-videos{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.videos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.videos video{
+width:100%;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -413,12 +457,55 @@ margin-bottom:10px;
       <span class="site-name">Asociación por el Debido Proceso</span>
     </div>
     <nav>
-      <a href="#quienes">Quiénes Somos</a>
+      <nav>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#quienes">Quiénes Somos</a>
       <a href="#acompanamiento">Acompañamiento</a>
       <a href="#videos">Material</a>
       <a href="#donativos">Donativos</a>
       <a href="#contacto" class="nav-button">Contacto</a>
       </nav>
+        <!-- HOME -->
+<section id="home">
+
+<!-- HERO -->
+<section class="hero-image">
+  <div class="hero-overlay">
+    <h1>
+      Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.
+    </h1>
+  </div>
+</section>
+
+<!-- VIDEOS DESTACADOS HOME -->
+<div class="home-videos">
+
+<h2 class="section-title">Material Informativo</h2>
+
+<div class="videos">
+
+<video controls poster="portada1.jpg">
+  <source src="video1.mp4" type="video/mp4">
+</video>
+
+<video controls poster="portada1.jpg">
+  <source src="video2.mp4" type="video/mp4">
+</video>
+
+<video controls poster="portada1.jpg">
+  <source src="video3.mp4" type="video/mp4">
+</video>
+
+<video controls poster="portada1.jpg">
+  <source src="video4.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+</section>
   </div>
 </header>
 
@@ -499,31 +586,7 @@ margin-bottom:10px;
   </div>
 </section>
  
-<!-- VIDEOS -->
-<section id="videos">
-  <h2 class="section-title">Material Informativo</h2>
 
-  <div class="videos" data-aos="fade-up">
-
-    <video controls poster="portada1.jpg">
-      <source src="video1.mp4" type="video/mp4">
-      Tu navegador no soporta video.
-    </video>
-
-    <video controls poster="portada1.jpg">
-      <source src="video2.mp4" type="video/mp4">
-    </video>
-
-    <video controls poster="portada1.jpg">
-      <source src="video3.mp4" type="video/mp4">
-    </video>
-
-    <video controls poster="portada1.jpg">
-      <source src="video4.mp4" type="video/mp4">
-    </video>
-
-  </div>
-</section>
 
 <!-- CONTACTO -->
 <section id="contacto">
@@ -625,6 +688,7 @@ updateCounter();
 
 </body>
 </html>
+
 
 
 
