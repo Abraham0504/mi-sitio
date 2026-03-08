@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-  <meta name="robots" content="index, follow">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asociación por el Debido Proceso</title>
-  <meta name="description" content="Asociación civil dedicada a la defensa del debido proceso y los derechos fundamentales. Ofrecemos orientación y acompañamiento a personas afectadas por procesos legales injustos.">
+  <meta name="description" content="Asociación civil dedicada a la defensa del debido proceso y los derechos fundamentales.">
+  <meta name="keywords" content="debido proceso, defensa legal, derechos humanos, asociación civil, orientación legal México">
+  <meta name="author" content="Asociación por el Debido Proceso">
+  <meta property="og:title" content="Asociación por el Debido Proceso">
+  <meta property="og:description" content="Orientación y acompañamiento a personas afectadas por procesos legales injustos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero.jpg">
+  <meta name="robots" content="index, follow">
 
-<meta name="keywords" content="debido proceso, defensa legal, derechos humanos, asociación civil, orientación legal México">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-<meta name="author" content="Asociación por el Debido Proceso">
-
-<meta property="og:title" content="Asociación por el Debido Proceso">
-
-<meta property="og:description" content="Orientación y acompañamiento a personas afectadas por procesos legales injustos.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:image" content="hero.jpg">
-
-  <!-- ESTILOS GENERALES -->
   <style>
     * {
       margin: 0;
@@ -32,9 +27,10 @@
       line-height: 1.6;
       background-color: #f4f6f8;
       color: #333;
-      padding-top: 90px;
+      padding-top: 80px;
     }
 
+    /* ── NAVBAR ── */
     header.navbar {
       background: #1f2d3d;
       color: white;
@@ -42,7 +38,6 @@
       width: 100%;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(6px);
     }
 
     .nav-container {
@@ -67,6 +62,7 @@
     .site-name {
       font-weight: 600;
       font-size: 1.05rem;
+      color: white;
     }
 
     nav a {
@@ -74,7 +70,7 @@
       text-decoration: none;
       margin-left: 25px;
       font-size: 0.95rem;
-      transition: 0.3s;
+      transition: opacity 0.3s;
     }
 
     nav a:hover {
@@ -87,107 +83,57 @@
       border-radius: 20px;
     }
 
-    .hero-image{
-position:relative;
-height:100vh;
-background:url("hero.jpg") center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-}
+    /* ── HERO ── */
+    .hero-image {
+      position: relative;
+      height: 90vh;
+      background: url("hero.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.hero-overlay{
-background:rgba(0,0,0,0.55);
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-overlay h1{
-color:white;
-font-size:3rem;
-max-width:900px;
-}
-
-.hero-overlay p{
-color:white;
-font-size:1.2rem;
-margin-top:20px;
-}
-
-.hero-button{
-margin-top:30px;
-padding:12px 28px;
-background:#4a90e2;
-border-radius:30px;
-color:white;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-}
-
-    .hero {
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.55);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px 20px 70px;
-      background: #e9eef3;
+      padding: 20px;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #1f2d3d;
+    .hero-overlay h1 {
+      color: white;
+      font-size: 2.8rem;
+      max-width: 900px;
     }
-    <section id="impacto">
 
-<h2 class="section-title">Nuestro Impacto</h2>
+    .hero-overlay p {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
 
-<div class="impact-grid">
+    .hero-button {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #4a90e2;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s;
+    }
 
-<div class="impact-card">
-<h3 class="counter" data-target="200">0</h3>
-<p>Personas orientadas</p>
-</div>
+    .hero-button:hover {
+      background: #357abd;
+    }
 
-<div class="impact-card">
-<h3 class="counter" data-target="50">0</h3>
-<p>Casos acompañados</p>
-</div>
-
-<div class="impact-card">
-<h3 class="counter" data-target="10">0</h3>
-<p>Profesionales aliados</p>
-</div>
-
-</div>
-</section>
-
-    <section id="impacto">
-<h2 class="section-title">Nuestro Impacto</h2>
-
-<div class="impact-grid">
-
-<div class="impact-card">
-<h3>+200</h3>
-<p>Personas orientadas</p>
-</div>
-
-<div class="impact-card">
-<h3>+50</h3>
-<p>Casos acompañados</p>
-</div>
-
-<div class="impact-card">
-<h3>10</h3>
-<p>Profesionales aliados</p>
-</div>
-
-</div>
-</section>
-
+    /* ── SECCIONES GENERALES ── */
     section {
       padding: 70px 20px;
       max-width: 1100px;
@@ -201,37 +147,101 @@ display:inline-block;
       color: #1f2d3d;
     }
 
+    /* ── CARD ── */
     .card {
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-margin-bottom:30px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
-
-    .videos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.videos video{
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-    .contact-info {
-      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    /* ── IMPACTO ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .impact-card {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .impact-card h3 {
+      font-size: 2.5rem;
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+
+    /* ── VIDEOS ── */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .videos video {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ── DONATIVOS ── */
+    .donativos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .donativo-box {
+      background: #f9fbfd;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .donativo-box h3 {
+      margin-bottom: 15px;
+      color: #1f2d3d;
+    }
+
+    .donar-boton {
+      display: inline-block;
+      margin-top: 15px;
+      background: #4a90e2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .donar-boton:hover {
+      background: #357abd;
+    }
+
+    /* ── FOOTER ── */
     footer {
       background: #1f2d3d;
       color: white;
@@ -239,455 +249,230 @@ box-shadow:0 10px 20px rgba(0,0,0,0.15);
       padding: 30px;
       font-size: 0.9rem;
     }
-   
- 
 
-    .donativos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-overlay h1 {
+        font-size: 1.8rem;
+      }
 
-.donativo-box {
-  background: #f9fbfd;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+      nav a {
+        margin-left: 12px;
+        font-size: 0.85rem;
+      }
 
-.donativo-box h3 {
-  margin-bottom: 15px;
-  color: #1f2d3d;
-}
-
-.donar-boton {
-  display: inline-block;
-  margin-top: 15px;
-  background: #4a90e2;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.donar-boton:hover {
-  background: #357abd;
-}
-
-    .videos video{
-  width: 320px;
-  border-radius: 10px;
-}
-
-    .videos{
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.videos video{
-  width: 100%;
-  border-radius: 10px;
-}
-
-    .hero-overlay h1{
-  font-size: 3rem;
-  font-weight: 700;
-  max-width: 900px;
-}
-
-.hero-overlay p{
-  color: white;
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-.hero-button{
-  margin-top: 30px;
-  padding: 12px 28px;
-  background:#4a90e2;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
-}
-    .hero-image{
-position:relative;
-height:90vh;
-background:url("hero.jpg") center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.hero-overlay{
-background:rgba(0,0,0,0.5);
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-overlay h1{
-color:white;
-font-size:2.8rem;
-max-width:900px;
-}
-    .impact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.impact-card{
-background:white;
-padding:40px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.impact-card h3{
-font-size:2.2rem;
-color:#4a90e2;
-margin-bottom:10px;
-}
-    .impact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.impact-card{
-background:white;
-padding:40px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.impact-card h3{
-font-size:2.5rem;
-color:#4a90e2;
-margin-bottom:10px;
-}
-
-    .home-videos{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-.videos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
-.videos video{
-width:100%;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
+      .site-name {
+        font-size: 0.9rem;
+      }
+    }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
- 
-
-  <style>
-  @font-face {
-    font-display: block;
-    font-family: Roboto;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
-  }
-
-  @font-face {
-    font-display: fallback;
-    font-family: Roboto;
-    font-weight: 600;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
-  }
-
-  @font-face {
-    font-display: fallback;
-    font-family: Roboto;
-    font-weight: 700;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
-  }
-
-  #sib-container input::placeholder,
-  #sib-container textarea::placeholder {
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-    color: #c0ccda;
-  }
-
-  #sib-container a {
-    text-decoration: underline;
-    color: #2BB2FC;
-  }
-</style>
-
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-
-
 </head>
-  
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo Asociación" class="logo">
-      <span class="site-name">Asociación por el Debido Proceso</span>
-    </div>
-    <nav>
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="logo.png" alt="Logo Asociación" class="logo">
+        <span class="site-name">Asociación por el Debido Proceso</span>
+      </div>
       <nav>
- <nav>
-  <a href="#home">Home</a>
-  <a href="#quienes">Quiénes Somos</a>
-      <a href="#acompanamiento">Acompañamiento</a>
-      <a href="#videos">Material</a>
-      <a href="#donativos">Donativos</a>
-      <a href="#contacto" class="nav-button">Contacto</a>
+        <a href="#home">Home</a>
+        <a href="#quienes">Quiénes Somos</a>
+        <a href="#acompanamiento">Acompañamiento</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#videos">Material</a>
+        <a href="#donativos">Donativos</a>
+        <a href="#contacto" class="nav-button">Contacto</a>
       </nav>
-        <!-- HOME -->
-<section id="home">
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero-image">
-  <div class="hero-overlay">
-    <h1>
-      Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.
-    </h1>
+  <!-- ── HERO ── -->
+  <div id="home">
+    <div class="hero-image">
+      <div class="hero-overlay">
+        <h1>Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.</h1>
+        <a href="#quienes" class="hero-button">Conoce más</a>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- VIDEOS DESTACADOS HOME -->
-<div class="home-videos">
+  <!-- ── QUIÉNES SOMOS ── -->
+  <section id="quienes">
+    <h2 class="section-title">Quiénes Somos</h2>
+    <div class="card" data-aos="fade-up">
+      <p>
+        Somos una asociación civil comprometida con la defensa de los derechos fundamentales.
+        Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional
+        a personas que enfrentan procesos legales derivados de acusaciones falsas.
+      </p>
+      <br>
+      <p>
+        Actuamos desde una postura institucional, respetuosa y apegada a la legalidad,
+        promoviendo soluciones basadas en el Estado de Derecho.
+      </p>
+    </div>
+  </section>
 
-<h2 class="section-title">Material Informativo</h2>
+  <!-- ── ACOMPAÑAMIENTO ── -->
+  <section id="acompanamiento">
+    <h2 class="section-title">Nuestro Acompañamiento</h2>
+    <div class="card" data-aos="fade-up">
+      <ul>
+        <li>Orientación inicial sobre procesos legales</li>
+        <li>Canalización con profesionales especializados</li>
+        <li>Acompañamiento emocional y contención</li>
+        <li>Información clara sobre derechos y obligaciones</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="videos">
+  <!-- ── IMPACTO ── -->
+  <section id="impacto">
+    <h2 class="section-title">Nuestro Impacto</h2>
+    <div class="impact-grid" data-aos="fade-up">
+      <div class="impact-card">
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Personas orientadas</p>
+      </div>
+      <div class="impact-card">
+        <h3 class="counter" data-target="50">0</h3>
+        <p>Casos acompañados</p>
+      </div>
+      <div class="impact-card">
+        <h3 class="counter" data-target="10">0</h3>
+        <p>Profesionales aliados</p>
+      </div>
+    </div>
+  </section>
 
-<video controls poster="portada1.jpg">
-  <source src="video1.mp4" type="video/mp4">
-</video>
+  <!-- ── MATERIAL / VIDEOS ── -->
+  <section id="videos">
+    <h2 class="section-title">Material Informativo</h2>
+    <div class="videos" data-aos="fade-up">
+      <video controls poster="portada1.jpg">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+      <video controls poster="portada1.jpg">
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+      <video controls poster="portada1.jpg">
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+      <video controls poster="portada1.jpg">
+        <source src="video4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-<video controls poster="portada1.jpg">
-  <source src="video2.mp4" type="video/mp4">
-</video>
-
-<video controls poster="portada1.jpg">
-  <source src="video3.mp4" type="video/mp4">
-</video>
-
-<video controls poster="portada1.jpg">
-  <source src="video4.mp4" type="video/mp4">
-</video>
-
-</div>
-
-</div>
-
-</section>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero-image">
-  <div class="hero-overlay">
-    <h1>
-      Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.
-    </h1>
-  </div>
-</section>
-
-<!-- QUIÉNES SOMOS -->
-<section id="quienes">
-  <h2 class="section-title">Quiénes Somos</h2>
-  <div class="card">
-    <p>
-      Somos una asociación civil comprometida con la defensa de los derechos fundamentales.
-      Nuestro objetivo es ofrecer orientación, acompañamiento y canalización profesional
-      a personas que enfrentan procesos legales derivados de acusaciones falsas.
-    </p>
-    <p>
-      Actuamos desde una postura institucional, respetuosa y apegada a la legalidad,
-      promoviendo soluciones basadas en el Estado de Derecho.
-    </p>
-  </div>
-</section>
-
-<!-- ACOMPAÑAMIENTO -->
-<section id="acompanamiento">
-  <h2 class="section-title">Nuestro Acompañamiento</h2>
-  <div class="card" data-aos="fade-up"><div class="card">
-    <ul>
-      <li>Orientación inicial sobre procesos legales</li>
-      <li>Canalización con profesionales especializados</li>
-      <li>Acompañamiento emocional y contención</li>
-      <li>Información clara sobre derechos y obligaciones</li>
-    </ul>
-  </div>
-</section>
-  
-<!-- DONATIVOS -->
-<section id="donativos">
-  <h2 class="section-title">Donativos</h2>
-
-  <div class="donativos-grid" data-aos="fade-up">
-    <p style="text-align:center; margin-bottom:25px;">
-      Tu apoyo nos permite continuar brindando orientación y acompañamiento 
-      a personas que enfrentan procesos legales complejos.  
+  <!-- ── DONATIVOS ── -->
+  <section id="donativos">
+    <h2 class="section-title">Donativos</h2>
+    <p style="text-align:center; margin-bottom:25px;" data-aos="fade-up">
+      Tu apoyo nos permite continuar brindando orientación y acompañamiento
+      a personas que enfrentan procesos legales complejos.
       Cada contribución fortalece nuestra labor institucional.
     </p>
-
-    <div class="donativos-grid">
-
+    <div class="donativos-grid" data-aos="fade-up">
       <div class="donativo-box">
         <h3>Transferencia bancaria</h3>
         <p><strong>Banco:</strong> BBVA</p>
         <p><strong>Cuenta:</strong> 0123456789</p>
         <p><strong>CLABE:</strong> 012345678901234567</p>
       </div>
-
       <div class="donativo-box">
         <h3>Donación digital</h3>
         <p>Puedes realizar tu donación mediante plataforma digital segura.</p>
-        <a href="https://link.mercadopago.com.mx/tufundacion" 
-   target="_blank" 
-   class="donar-boton">
-   Donar ahora
-</a>
+        <a href="https://link.mercadopago.com.mx/tufundacion" target="_blank" class="donar-boton">
+          Donar ahora
+        </a>
       </div>
-
     </div>
-
     <p style="margin-top:30px; text-align:center; font-size:0.9rem;">
-      La información bancaria es confidencial. Si requieres comprobante, 
-      escríbenos a contacto@asociacion.org
+      La información bancaria es confidencial. Si requieres comprobante,
+      escríbenos a <a href="mailto:contacto@asociacion.org">contacto@asociacion.org</a>
     </p>
-  </div>
-</section>
- 
+  </section>
 
+  <!-- ── CONTACTO ── -->
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <div style="max-width:700px; margin:auto;" data-aos="fade-up">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfE17ZXVmhSex8u9CYreLQlnsuzi_RKNLKpWx5U7cy_ou1BdA/viewform?embedded=true"
+        width="100%"
+        height="1200"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border-radius:15px; background:white;">
+        Cargando…
+      </iframe>
+    </div>
+    <div class="card" data-aos="fade-up" style="max-width:700px; margin:30px auto 0;">
+      <p><strong>Correo:</strong> <a href="mailto:contacto@asociacion.org">contacto@asociacion.org</a></p>
+      <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
+      <p style="margin-top:10px;">Toda comunicación será tratada con estricta confidencialidad.</p>
+    </div>
+  </section>
 
-<!-- CONTACTO -->
-<section id="contacto">
-  <h2 class="section-title">Contacto</h2>
+  <!-- ── FOOTER ── -->
+  <footer>
+    © 2026 Asociación por el Debido Proceso | Todos los derechos reservados
+  </footer>
 
-  <div style="max-width:700px; margin:auto;">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfE17ZXVmhSex8u9CYreLQlnsuzi_RKNLKpWx5U7cy_ou1BdA/viewform?embedded=true"
-      width="100%" 
-      height="1200"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      style="border-radius:15px; background:white;">
-      Cargando…
-    </iframe>
-  </div>
-
-  
-
-
- 
-
-  <div class="card" data-aos="fade-up">
-    <p><strong>Correo:</strong> contacto@asociacion.org</p>
-    <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
-    <p>Toda comunicación será tratada con estricta confidencialidad.</p>
-  </div>
-</section>
-
-
-
-<footer>
-  © 2026 Asociación por el Debido Proceso | Todos los derechos reservados
-</footer>
-
-<script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Elija un código de país';
-  window.LOCALE = 'es';
-  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
-    "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-
-  window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío.";
-  window.GENERIC_INVALID_MESSAGE =
-    "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-
-  window.translation = {
-    common: {
-      selectedList: '{quantity} lista seleccionada',
-      selectedLists: '{quantity} listas seleccionadas',
-      selectedOption: '{quantity} seleccionado',
-      selectedOptions: '{quantity} seleccionados',
-    }
-  };
-
-  var AUTOHIDE = Boolean(0);
-</script>
-
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-
+  <!-- ── SCRIPTS ── -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init({
-duration:1000,
-once:true
-});
-</script>
-
   <script>
+    // Animaciones AOS
+    AOS.init({ duration: 1000, once: true });
 
-const counters = document.querySelectorAll('.counter');
+    // Scroll suave para los links del navbar
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
 
-counters.forEach(counter => {
+    // Contador animado (se activa al hacer scroll hacia la sección)
+    const counters = document.querySelectorAll('.counter');
 
-counter.innerText = '0';
+    const runCounter = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      let current = 0;
+      const increment = Math.ceil(target / 100);
+      const interval = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.innerText = '+' + target;
+          clearInterval(interval);
+        } else {
+          counter.innerText = current;
+        }
+      }, 20);
+    };
 
-const updateCounter = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
 
-const target = +counter.getAttribute('data-target');
-const c = +counter.innerText;
-
-const increment = target / 200;
-
-if(c < target){
-counter.innerText = `${Math.ceil(c + increment)}`;
-setTimeout(updateCounter,10);
-}else{
-counter.innerText = target;
-}
-
-};
-
-updateCounter();
-
-});
-
-</script>
+    counters.forEach(counter => observer.observe(counter));
+  </script>
 
 </body>
 </html>
+
 
 
 
