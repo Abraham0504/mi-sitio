@@ -192,18 +192,91 @@
       margin-bottom: 10px;
     }
 
-    /* ── VIDEOS ── */
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+    /* ── VIDEOS EN HOME ── */
+    .home-videos-section {
+      background: #fff;
+      padding: 70px 20px;
     }
 
-    .videos video {
+    .videos-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 1.05rem;
+      margin-top: -25px;
+      margin-bottom: 45px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .video-card {
+      background: #f4f6f8;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.14);
+    }
+
+    .video-wrapper {
+      position: relative;
       width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-info {
+      padding: 16px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .video-tag {
+      display: inline-block;
+      background: #e8f0fb;
+      color: #4a90e2;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .video-desc {
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* ── DONATIVOS ── */
@@ -282,7 +355,6 @@
         <a href="#quienes">Quiénes Somos</a>
         <a href="#acompanamiento">Acompañamiento</a>
         <a href="#impacto">Impacto</a>
-        <a href="#videos">Material</a>
         <a href="#donativos">Donativos</a>
         <a href="#contacto" class="nav-button">Contacto</a>
       </nav>
@@ -295,6 +367,63 @@
       <div class="hero-overlay">
         <h1>Bienvenido: aquí alzamos la voz por la familia y contra la discriminación en la ley vicaria.</h1>
         <a href="#quienes" class="hero-button">Conoce más</a>
+      </div>
+    </div>
+
+    <!-- VIDEOS EN HOME -->
+    <div class="home-videos-section">
+      <h2 class="section-title">Material Informativo</h2>
+      <p class="videos-subtitle">Conoce más sobre nuestro trabajo y los casos que acompañamos</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="portada1.jpg">
+              <source src="video1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">Orientación</span>
+            <p class="video-desc">Conoce cómo funciona el proceso de orientación legal</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="portada1.jpg">
+              <source src="video2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">Derechos</span>
+            <p class="video-desc">Tus derechos fundamentales ante un proceso legal</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="portada1.jpg">
+              <source src="video3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">Acompañamiento</span>
+            <p class="video-desc">Cómo te acompañamos durante todo el proceso</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="portada1.jpg">
+              <source src="video4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">Testimonios</span>
+            <p class="video-desc">Historias reales de personas que hemos apoyado</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -348,24 +477,7 @@
     </div>
   </section>
 
-  <!-- ── MATERIAL / VIDEOS ── -->
-  <section id="videos">
-    <h2 class="section-title">Material Informativo</h2>
-    <div class="videos" data-aos="fade-up">
-      <video controls poster="portada1.jpg">
-        <source src="video1.mp4" type="video/mp4">
-      </video>
-      <video controls poster="portada1.jpg">
-        <source src="video2.mp4" type="video/mp4">
-      </video>
-      <video controls poster="portada1.jpg">
-        <source src="video3.mp4" type="video/mp4">
-      </video>
-      <video controls poster="portada1.jpg">
-        <source src="video4.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
+
 
   <!-- ── DONATIVOS ── -->
   <section id="donativos">
@@ -392,7 +504,7 @@
     </div>
     <p style="margin-top:30px; text-align:center; font-size:0.9rem;">
       La información bancaria es confidencial. Si requieres comprobante,
-      escríbenos a <a href="mailto:contacto@asociacion.org">contacto@asociacion.org</a>
+      escríbenos a <a href="/cdn-cgi/l/email-protection#2c4f4342584d4f58436c4d5f434f454d4f45434202435e4b"><span class="__cf_email__" data-cfemail="4a2925243e2b293e250a2b392529232b292325246425382d">[email&#160;protected]</span></a>
     </p>
   </section>
 
@@ -412,7 +524,7 @@
       </iframe>
     </div>
     <div class="card" data-aos="fade-up" style="max-width:700px; margin:30px auto 0;">
-      <p><strong>Correo:</strong> <a href="mailto:contacto@asociacion.org">contacto@asociacion.org</a></p>
+      <p><strong>Correo:</strong> <a href="/cdn-cgi/l/email-protection#b3d0dcddc7d2d0c7dcf3d2c0dcd0dad2d0dadcdd9ddcc1d4"><span class="__cf_email__" data-cfemail="12717d7c667371667d5273617d717b73717b7d7c3c7d6075">[email&#160;protected]</span></a></p>
       <p><strong>Teléfono:</strong> +52 55 0000 0000</p>
       <p style="margin-top:10px;">Toda comunicación será tratada con estricta confidencialidad.</p>
     </div>
@@ -424,7 +536,7 @@
   </footer>
 
   <!-- ── SCRIPTS ── -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     // Animaciones AOS
     AOS.init({ duration: 1000, once: true });
@@ -453,25 +565,8 @@
           counter.innerText = '+' + target;
           clearInterval(interval);
         } else {
-          counter.innerText = current;
-        }
-      }, 20);
-    };
+          counter.innerTe
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          runCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => observer.observe(counter));
-  </script>
-
-</body>
-</html>
 
 
 
