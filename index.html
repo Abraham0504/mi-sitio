@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Violencia No Tiene Género</title>
+  <title>La Violencia No Tiene Género A.C.</title>
   <meta name="description" content="Asociación civil dedicada a la defensa del debido proceso y los derechos fundamentales.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -51,41 +51,45 @@
     .nav-container {
       max-width: 1320px;
       margin: auto;
-      padding: 0 24px;
+      padding: 0 20px;
       height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
     }
 
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       cursor: pointer;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .logo { height: 58px; }
 
     .site-name {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.92rem;
       color: white;
+      white-space: nowrap;
       line-height: 1.3;
     }
 
-    nav { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+    nav { display: flex; align-items: center; gap: 1px; flex-wrap: nowrap; }
 
     nav a {
       color: rgba(255,255,255,0.88);
       text-decoration: none;
-      padding: 7px 10px;
+      padding: 6px 8px;
       border-radius: 8px;
-      font-size: 0.8rem;
+      font-size: 0.74rem;
       font-weight: 500;
       transition: all 0.2s;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     nav a:hover { background: rgba(255,255,255,0.15); color: white; }
@@ -94,7 +98,7 @@
       background: var(--blue-mid) !important;
       color: white !important;
       border-radius: 20px !important;
-      padding: 7px 16px !important;
+      padding: 6px 14px !important;
     }
 
     .nav-btn:hover { background: #1d4ed8 !important; }
@@ -106,7 +110,7 @@
     /* ══ HERO ══ */
     .hero-image {
       height: 92vh;
-      background: url("hero.jpg") center / cover no-repeat;
+      background: url("imagen-home.jpg") center / cover no-repeat;
       display: flex; align-items: center; justify-content: center;
       position: relative;
     }
@@ -158,11 +162,7 @@
       border: 2px solid transparent;
     }
 
-    .hero-button:hover {
-      background: transparent;
-      border-color: white;
-      transform: translateY(-2px);
-    }
+    .hero-button:hover { background: transparent; border-color: white; transform: translateY(-2px); }
 
     /* ══ VIDEOS HOME ══ */
     .home-videos-section { background: var(--white); padding: 80px 24px; }
@@ -313,20 +313,6 @@
 
     .btn-white:hover { background: var(--blue-pale); transform: translateY(-2px); }
 
-    /* ══ CARD ══ */
-    .card {
-      background: var(--white);
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(74,44,110,0.08);
-      margin-bottom: 24px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(74,44,110,0.14); }
-    .card ul { padding-left: 22px; }
-    .card ul li { margin-bottom: 12px; color: var(--muted); line-height: 1.75; }
-
     /* ══ SERVICE CARDS ══ */
     .services-grid {
       display: grid;
@@ -380,7 +366,13 @@
       margin-bottom: 8px;
     }
 
-    .impact-card p { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+    .impact-card p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
 
     /* ══ TIMELINE ══ */
     .timeline-container {
@@ -463,8 +455,7 @@
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(74,44,110,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
     }
 
     .evento-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(74,44,110,0.18); }
@@ -493,14 +484,7 @@
       border-radius: 20px;
     }
 
-    .evento-body {
-      padding: 24px 28px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
+    .evento-body { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
     .evento-desc { color: var(--muted); font-size: 0.93rem; line-height: 1.7; margin-bottom: 8px; }
     .evento-meta { display: flex; flex-direction: column; gap: 7px; }
 
@@ -521,20 +505,14 @@
       flex-shrink: 0;
     }
 
-    /* ══ SIGUENOS ══ */
+    /* ══ SÍGUENOS ══ */
     .siguenos-band {
       background: linear-gradient(135deg, var(--purple-mid) 0%, var(--blue-mid) 100%);
       padding: 60px 24px;
       text-align: center;
     }
 
-    .siguenos-band h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: white;
-      margin-bottom: 12px;
-    }
-
+    .siguenos-band h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: white; margin-bottom: 12px; }
     .siguenos-band p { color: rgba(255,255,255,0.8); font-size: 0.97rem; margin-bottom: 32px; }
 
     .social-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
@@ -569,15 +547,7 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 4vw, 2.9rem);
       color: white;
-      margin-bottom: 20px;
-    }
-
-    .nosotros-hero p {
-      color: rgba(255,255,255,0.8);
-      font-size: 1.08rem;
-      max-width: 780px;
-      margin: auto;
-      line-height: 1.85;
+      margin-bottom: 0;
     }
 
     .nosotros-what { background: var(--white); padding: 70px 24px; }
@@ -598,6 +568,15 @@
       border-left: 5px solid var(--purple-mid);
     }
 
+    .what-card .purpose-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      margin-bottom: 10px;
+    }
+
     .what-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
@@ -605,7 +584,8 @@
       margin-bottom: 16px;
     }
 
-    .what-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; }
+    .what-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 10px; }
+    .what-card p:last-child { margin-bottom: 0; }
 
     /* ══ ÚNETE ══ */
     .unete-band {
@@ -693,11 +673,7 @@
       box-shadow: 0 6px 20px rgba(74,44,110,0.3);
     }
 
-    .btn-facturar:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 32px rgba(74,44,110,0.4);
-    }
-
+    .btn-facturar:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(74,44,110,0.4); }
     .btn-facturar svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
 
     /* ══ CONTACTO ══ */
@@ -717,6 +693,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+      overflow: hidden;
     }
 
     .contact-info-icon {
@@ -725,11 +702,19 @@
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
+      flex-shrink: 0;
     }
 
     .contact-info-box h4 { font-size: 0.78rem; font-weight: 700; color: var(--purple-mid); letter-spacing: 0.1em; text-transform: uppercase; }
     .contact-info-box p { font-size: 0.93rem; color: var(--text); }
-    .contact-info-box a { color: var(--blue-mid); text-decoration: none; font-size: 0.93rem; }
+    .contact-info-box a {
+      color: var(--blue-mid);
+      text-decoration: none;
+      font-size: 0.88rem;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      line-height: 1.5;
+    }
     .contact-info-box a:hover { text-decoration: underline; }
 
     /* ══ FOOTER ══ */
@@ -753,6 +738,11 @@
     .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
     /* ══ RESPONSIVE ══ */
+    @media (max-width: 1024px) {
+      nav a { font-size: 0.68rem; padding: 5px 6px; }
+      .site-name { font-size: 0.8rem; }
+    }
+
     @media (max-width: 768px) {
       .hero-overlay h1 { font-size: 1.75rem; }
       .video-grid { grid-template-columns: 1fr; }
@@ -763,8 +753,9 @@
       .timeline-item, .timeline-item:nth-child(even) { padding-right: 0; padding-left: 52px; justify-content: flex-start; }
       .timeline-dot { left: 20px; }
       .timeline-card { max-width: 100%; }
-      nav a { padding: 6px 7px; font-size: 0.75rem; }
-      .site-name { font-size: 0.82rem; }
+      nav { flex-wrap: wrap; }
+      nav a { padding: 5px 6px; font-size: 0.68rem; }
+      .site-name { font-size: 0.78rem; white-space: normal; }
       .logo { height: 46px; }
       .nosotros-what-inner { grid-template-columns: 1fr; }
     }
@@ -778,13 +769,12 @@
     <div class="nav-container">
       <div class="logo-area" onclick="showPage('home')">
         <img src="logo.png" alt="Logo" class="logo">
-        <span class="site-name">La Violencia No<br>Tiene Género</span>
+        <span class="site-name">La Violencia No Tiene Género A.C.</span>
       </div>
       <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('nosotros')">Nosotros</a>
         <a onclick="showPage('apoyo')">Apoyo Legal</a>
-        <a onclick="showPage('asesoria')">Asesoría</a>
         <a onclick="showPage('mision')">Misión</a>
         <a onclick="showPage('timeline')">Historia</a>
         <a onclick="showPage('eventos')">Eventos</a>
@@ -864,20 +854,35 @@
 
     <div class="nosotros-hero">
       <h1>Nosotros</h1>
-      <p>Nuestra asociación apoya a los hombres víctimas de maltrato, así como a aquellos que son injustamente acusados mediante denuncias falsas por violencia de género. Los inocentes no se conforman con una pena reducida ni buscan un acuerdo; luchan por demostrar su inocencia y obtener justicia. Estaremos a su lado para brindarles todo el apoyo necesario en su defensa.</p>
     </div>
 
     <div class="nosotros-what">
       <div class="nosotros-what-inner">
 
+        <!-- Bloque Propósito (nuevo texto) -->
+        <div class="what-card animate-on-scroll">
+          <p class="purpose-eyebrow">Propósito</p>
+          <h3>¿Por qué existimos?</h3>
+          <p>Trabajamos para cambiar la percepción y conciencia en torno a la violencia de género hacia los hombres.</p>
+          <p>Nuestra asociación se enfoca en colaborar con hombres que enfrentan denuncias falsas o situaciones de vulnerabilidad derivadas de conflictos personales con autoridades judiciales.</p>
+        </div>
+
+        <!-- Lo que hacemos -->
         <div class="what-card animate-on-scroll">
           <h3>Lo que hacemos</h3>
           <p>Nuestra asociación proporciona apoyo legal y emocional a hombres que han sido víctimas de violencia doméstica o que enfrentan acusaciones falsas de violencia de género. Estamos comprometidos a brindarles el respaldo necesario para defender su inocencia y obtener justicia en un entorno seguro y comprensivo.</p>
         </div>
 
+        <!-- Nuestro compromiso -->
         <div class="what-card animate-on-scroll">
           <h3>Nuestro compromiso</h3>
           <p>Nuestros servicios legales y emocionales están diseñados para empoderar a los hombres que sufren en silencio, ayudándoles a superar las barreras legales y emocionales que enfrentan en situaciones de violencia doméstica y acusaciones injustas.</p>
+        </div>
+
+        <!-- Texto original del hero como nuevo recuadro -->
+        <div class="what-card animate-on-scroll">
+          <h3>Nuestra postura</h3>
+          <p>Nuestra asociación apoya a los hombres víctimas de maltrato, así como a aquellos que son injustamente acusados mediante denuncias falsas por violencia de género. Los inocentes no se conforman con una pena reducida ni buscan un acuerdo; luchan por demostrar su inocencia y obtener justicia. Estaremos a su lado para brindarles todo el apoyo necesario en su defensa.</p>
         </div>
 
       </div>
@@ -906,10 +911,11 @@
   </div><!-- /nosotros -->
 
 
-  <!-- ══════════ PAGE: APOYO LEGAL ══════════ -->
+  <!-- ══════════ PAGE: APOYO LEGAL + ASESORÍA (unificados) ══════════ -->
   <div id="page-apoyo" class="page">
     <div class="inner-page">
 
+      <!-- Bloque 1: texto | imagen -->
       <div class="split-section animate-on-scroll">
         <div class="split-text">
           <span class="split-eyebrow">Nuestros servicios</span>
@@ -918,9 +924,21 @@
           <p>Nuestro equipo de profesionales te acompaña en cada etapa del proceso legal, garantizando que tus derechos sean respetados y defendidos con rigor.</p>
           <span onclick="showPage('contacto')" class="btn-primary">Solicitar orientación</span>
         </div>
-        <div class="split-image" style="background-image: url('hero.jpg');"></div>
+        <div class="split-image" style="background-image: url('imagen-apoyo.jpg');"></div>
       </div>
 
+      <!-- Bloque 2: imagen | texto (intercalado — contenido de Asesoría) -->
+      <div class="split-section animate-on-scroll">
+        <div class="split-image" style="background-image: url('imagen-asesoria.jpg');"></div>
+        <div class="split-text">
+          <span class="split-eyebrow">Consejería y apoyo emocional</span>
+          <h2>Asesoría: Estamos contigo</h2>
+          <p>Brindamos servicios de consejería y apoyo emocional a hombres que son víctimas de violencia de cualquier tipo —psicológica, económica, en redes sociales o a través de otros medios de comunicación— que afecte su imagen personal, familiar o laboral, por parte de mujeres, en el momento o en el tiempo posterior a los hechos falsamente denunciados.</p>
+          <span onclick="showPage('contacto')" class="btn-primary">Contactar ahora</span>
+        </div>
+      </div>
+
+      <!-- Cards originales de Apoyo Legal (sin tocar) -->
       <div class="services-grid">
         <div class="service-card animate-on-scroll">
           <div class="service-icon">⚖️</div>
@@ -941,25 +959,6 @@
 
     </div>
   </div><!-- /apoyo -->
-
-
-  <!-- ══════════ PAGE: ASESORÍA ══════════ -->
-  <div id="page-asesoria" class="page">
-    <div class="inner-page">
-      <h2 class="section-title animate-on-scroll">Asesoría</h2>
-      <p class="section-subtitle animate-on-scroll">Apoyo integral para hombres en situación de vulnerabilidad</p>
-
-      <div class="split-section animate-on-scroll">
-        <div class="split-image" style="background-image: url('hero.jpg');"></div>
-        <div class="split-text">
-          <span class="split-eyebrow">Consejería y apoyo emocional</span>
-          <h2>Estamos contigo</h2>
-          <p>Brindamos servicios de consejería y apoyo emocional a hombres que son víctimas de violencia de cualquier tipo —psicológica, económica, en redes sociales o a través de otros medios de comunicación— que afecte su imagen personal, familiar o laboral, por parte de mujeres, en el momento o en el tiempo posterior a los hechos falsamente denunciados.</p>
-          <span onclick="showPage('contacto')" class="btn-primary">Contactar ahora</span>
-        </div>
-      </div>
-    </div>
-  </div><!-- /asesoria -->
 
 
   <!-- ══════════ PAGE: MISIÓN ══════════ -->
@@ -990,20 +989,20 @@
       </div>
 
       <div style="margin-top: 60px;">
-        <h2 class="section-title animate-on-scroll">Nuestro Impacto</h2>
+        <h2 class="section-title animate-on-scroll">La Asociación en números</h2>
         <div class="impact-band">
           <div class="impact-grid">
             <div class="impact-card animate-on-scroll">
-              <h3 class="counter" data-target="200">0</h3>
-              <p>Personas orientadas</p>
+              <h3 class="counter" data-target="97" data-prefix="" data-suffix="">0</h3>
+              <p>Hombres Apoyados</p>
             </div>
             <div class="impact-card animate-on-scroll">
-              <h3 class="counter" data-target="50">0</h3>
-              <p>Casos acompañados</p>
+              <h3 class="counter" data-target="124" data-prefix="$" data-suffix=" K">0</h3>
+              <p>Fondos Recaudados</p>
             </div>
             <div class="impact-card animate-on-scroll">
-              <h3 class="counter" data-target="10">0</h3>
-              <p>Profesionales aliados</p>
+              <h3 class="counter" data-target="23" data-prefix="" data-suffix="">0</h3>
+              <p>Voluntarios</p>
             </div>
           </div>
         </div>
@@ -1041,6 +1040,24 @@
         </div>
       </div>
 
+      <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2021</div>
+          <h3>Consolidación como referente nacional</h3>
+          <p>Nos consolidamos como una de las asociaciones con mayor número de apoyos otorgados, fortaleciendo nuestra red de voluntarios y profesionales aliados a lo largo del país.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2026</div>
+          <h3>Expansión y mejora continua</h3>
+          <p>Ampliamos nuestra red de apoyo, sumamos nuevos colaboradores y seguimos mejorando nuestros programas para llegar a más hombres que necesitan orientación y justicia.</p>
+        </div>
+      </div>
+
     </div>
   </div><!-- /timeline -->
 
@@ -1054,7 +1071,6 @@
     </div>
 
     <div class="inner-page">
-
       <div class="eventos-grid">
 
         <div class="evento-card animate-on-scroll">
@@ -1065,18 +1081,9 @@
           <div class="evento-body">
             <p class="evento-desc">Sesión informativa sobre derechos legales, proceso penal y cómo actuar ante una denuncia falsa. Cupo limitado.</p>
             <div class="evento-meta">
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📅</div>
-                <span><strong>Fecha:</strong> 15 de abril, 2026</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">🕐</div>
-                <span><strong>Hora:</strong> 10:00 – 13:00 hrs</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📍</div>
-                <span><strong>Lugar:</strong> Av. Insurgentes Sur 1234, Col. Del Valle, CDMX</span>
-              </div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📅</div><span><strong>Fecha:</strong> 15 de abril, 2026</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">🕐</div><span><strong>Hora:</strong> 10:00 – 13:00 hrs</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📍</div><span><strong>Lugar:</strong> Av. Insurgentes Sur 1234, Col. Del Valle, CDMX</span></div>
             </div>
           </div>
         </div>
@@ -1089,18 +1096,9 @@
           <div class="evento-body">
             <p class="evento-desc">Taller psicológico dirigido a hombres que atraviesan procesos legales complejos. Espacio seguro y confidencial.</p>
             <div class="evento-meta">
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📅</div>
-                <span><strong>Fecha:</strong> 22 de abril, 2026</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">🕐</div>
-                <span><strong>Hora:</strong> 16:00 – 18:30 hrs</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📍</div>
-                <span><strong>Lugar:</strong> Calle Durango 280, Col. Roma Norte, CDMX</span>
-              </div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📅</div><span><strong>Fecha:</strong> 22 de abril, 2026</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">🕐</div><span><strong>Hora:</strong> 16:00 – 18:30 hrs</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📍</div><span><strong>Lugar:</strong> Calle Durango 280, Col. Roma Norte, CDMX</span></div>
             </div>
           </div>
         </div>
@@ -1113,18 +1111,9 @@
           <div class="evento-body">
             <p class="evento-desc">Panel de expertos analiza el impacto de la Ley Vicaria, casos documentados y propuestas de reforma legislativa.</p>
             <div class="evento-meta">
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📅</div>
-                <span><strong>Fecha:</strong> 10 de mayo, 2026</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">🕐</div>
-                <span><strong>Hora:</strong> 09:00 – 14:00 hrs</span>
-              </div>
-              <div class="evento-meta-item">
-                <div class="evento-meta-icon">📍</div>
-                <span><strong>Lugar:</strong> Auditorio Nacional de la UNAM, CDMX</span>
-              </div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📅</div><span><strong>Fecha:</strong> 10 de mayo, 2026</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">🕐</div><span><strong>Hora:</strong> 09:00 – 14:00 hrs</span></div>
+              <div class="evento-meta-item"><div class="evento-meta-icon">📍</div><span><strong>Lugar:</strong> Auditorio Nacional de la UNAM, CDMX</span></div>
             </div>
           </div>
         </div>
@@ -1136,17 +1125,17 @@
       <h2>Síguenos</h2>
       <p>Mantente informado sobre próximos eventos, noticias y recursos en nuestras redes sociales.</p>
       <div class="social-buttons">
-        <a href="https://facebook.com/tupagina" target="_blank" class="social-btn">
+        <!-- Facebook: LA VIOLENCIA NO TIENE GENERO A.C -->
+        <a href="https://www.facebook.com/profile.php?id=61575893662600" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook
         </a>
-        <a href="https://instagram.com/tupagina" target="_blank" class="social-btn">
+        <!-- Instagram: @lvntg_ac -->
+        <a href="https://www.instagram.com/lvntg_ac/" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>Instagram
         </a>
-        <a href="https://twitter.com/tupagina" target="_blank" class="social-btn">
+        <!-- X / Twitter: @LVNTGACmx -->
+        <a href="https://x.com/LVNTGACmx" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>Twitter / X
-        </a>
-        <a href="https://youtube.com/tupagina" target="_blank" class="social-btn">
-          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--purple-dark)"/></svg>YouTube
         </a>
       </div>
     </div>
@@ -1209,7 +1198,6 @@
         <a href="mailto:laviolencianotienegenero@gmail.com" style="color:var(--blue-mid);">laviolencianotienegenero@gmail.com</a>
       </p>
 
-      <!-- ── Sección Facturar ── -->
       <div class="facturar-section animate-on-scroll">
         <h3>¿Necesitas tu factura?</h3>
         <p>Si realizaste un donativo y requieres comprobante fiscal, completa el siguiente formulario y la generamos para ti.</p>
@@ -1239,12 +1227,12 @@
         <div class="contact-info-box">
           <div class="contact-info-icon">📧</div>
           <h4>Correo electrónico</h4>
-          <a href="mailto:laviolencianotienegenero@gmail.com">laviolencianotienegenero@gmail.com</a>
+          <a href="mailto:laviolencianotienegenero@gmail.com">laviolencianotienegenero<br>@gmail.com</a>
         </div>
         <div class="contact-info-box">
           <div class="contact-info-icon">📞</div>
           <h4>Teléfono</h4>
-          <p>+52 5538771894</p>
+          <p>+52 55 3877 1894</p>
         </div>
         <div class="contact-info-box">
           <div class="contact-info-icon">📍</div>
@@ -1310,17 +1298,26 @@
     function initCounters() {
       const cObs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && entry.target.innerText === '0') {
-            const tgt = +entry.target.getAttribute('data-target');
-            let cur = 0;
-            const inc = Math.ceil(tgt / 80);
-            const iv = setInterval(() => {
-              cur += inc;
-              if (cur >= tgt) { entry.target.innerText = '+' + tgt; clearInterval(iv); }
-              else entry.target.innerText = cur;
-            }, 18);
-            cObs.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          if (el.innerText !== '0') return;
+
+          const tgt    = +el.getAttribute('data-target');
+          const prefix = el.getAttribute('data-prefix') || '';
+          const suffix = el.getAttribute('data-suffix') || '';
+          let cur = 0;
+          const inc = Math.ceil(tgt / 80);
+
+          const iv = setInterval(() => {
+            cur += inc;
+            if (cur >= tgt) {
+              el.innerText = prefix + tgt + suffix;
+              clearInterval(iv);
+            } else {
+              el.innerText = prefix + cur + suffix;
+            }
+          }, 18);
+          cObs.unobserve(el);
         });
       }, { threshold: 0.5 });
       document.querySelectorAll('.page.active .counter').forEach(c => cObs.observe(c));
