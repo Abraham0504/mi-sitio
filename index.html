@@ -771,12 +771,27 @@
     /* ══ RESPONSIVE MÓVIL ══ */
     @media (max-width: 768px) {
       /* Navbar */
-      .nav-container {
-        height: auto;
-        padding: 12px 20px;
-        justify-content: flex-start;
-        gap: 14px;
-      }
+      /* Busca esto y cámbialo */
+@media (max-width: 768px) {
+  .nav-container {
+    height: auto;
+    padding: 10px 20px;
+    display: flex;             /* Aseguramos flex */
+    justify-content: space-between; /* ESTO ES LA CLAVE: reparte el espacio */
+    align-items: center;
+    gap: 0;                    /* Quitamos el gap para que no empuje */
+  }
+
+  /* Añade esto para controlar el tamaño del texto y logo en móvil */
+  .logo-area {
+    max-width: 80%;           /* Evita que el logo y texto ocupen todo */
+    overflow: hidden;
+  }
+
+  .logo { 
+    height: 80px;             /* Reducimos el logo, 140px es gigante para móvil */
+  }
+}
       .logo { height: 140px; }
       .hamburger { display: -webkit-flex; display: flex; }
       nav {
@@ -1379,6 +1394,7 @@
 
 </body>
 </html>
+
 
 
 
