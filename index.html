@@ -753,7 +753,6 @@
       .timeline-item, .timeline-item:nth-child(even) { padding-right: 0; padding-left: 52px; justify-content: flex-start; }
       .timeline-dot { left: 20px; }
       .timeline-card { max-width: 100%; }
-      nav { flex-wrap: wrap; }
       nav a { padding: 5px 6px; font-size: 0.68rem; }
       .site-name { font-size: 0.78rem; white-space: normal; }
       .logo { height: 97px; }
@@ -813,6 +812,11 @@
         <img src="logo.png" alt="Logo" class="logo">
         <span class="site-name">La Violencia No Tiene Género A.C.</span>
       </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('nosotros')">Nosotros</a>
@@ -823,11 +827,6 @@
         <a onclick="showPage('unete')">Únete</a>
         <a onclick="showPage('donativos')">Donativos</a>
         <a onclick="showPage('contacto')" class="nav-btn">Contacto</a>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
       </nav>
     </div>
   </header>
@@ -1385,6 +1384,7 @@ document.querySelector('header').classList.remove('nav-mobile-open');
 
 </body>
 </html>
+
 
 
 
