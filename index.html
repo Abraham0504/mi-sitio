@@ -104,8 +104,9 @@
 
     /* ══ HAMBURGER ══ */
     .hamburger {
-      display: none;
-      flex-direction: column;
+  display: none;
+  -webkit-flex-direction: column;
+  flex-direction: column;
       gap: 5px;
       cursor: pointer;
       padding: 6px;
@@ -777,7 +778,7 @@
         gap: 14px;
       }
       .logo { height: 140px; }
-      .hamburger { display: flex; }
+      .hamburger { display: -webkit-flex; display: flex; }
       nav {
         display: none;
         position: absolute;
@@ -1378,6 +1379,7 @@
 
 </body>
 </html>
+
 
 
 
