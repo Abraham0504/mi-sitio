@@ -52,7 +52,7 @@
       max-width: 1320px;
       margin: auto;
       padding: 0 20px;
-      height: 90px;
+      height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -68,7 +68,7 @@
       flex-shrink: 0;
     }
 
-    .logo { height: 180px; }
+    .logo { height: 58px; }
 
     .site-name {
       font-weight: 700;
@@ -753,54 +753,11 @@
       .timeline-item, .timeline-item:nth-child(even) { padding-right: 0; padding-left: 52px; justify-content: flex-start; }
       .timeline-dot { left: 20px; }
       .timeline-card { max-width: 100%; }
-      nav { flex-wrap: wrap; }
       nav a { padding: 5px 6px; font-size: 0.68rem; }
       .site-name { font-size: 0.78rem; white-space: normal; }
-      .logo { height: 97px; }
+      .logo { height: 46px; }
       .nosotros-what-inner { grid-template-columns: 1fr; }
     }
-
-    .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 6px;
-  background: none;
-  border: none;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.nav-mobile-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-mobile-open .hamburger span:nth-child(2) { opacity: 0; }
-.nav-mobile-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0; right: 0;
-    background: linear-gradient(135deg, var(--purple-dark), var(--blue-strong));
-    flex-direction: column;
-    padding: 16px;
-    gap: 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  }
-
-  nav.open { display: flex; }
-  nav a { font-size: 0.9rem; padding: 10px 14px; border-radius: 8px; }
-}
   </style>
 </head>
 
@@ -813,6 +770,11 @@
         <img src="logo.png" alt="Logo" class="logo">
         <span class="site-name">La Violencia No Tiene Género A.C.</span>
       </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('nosotros')">Nosotros</a>
@@ -823,11 +785,6 @@
         <a onclick="showPage('unete')">Únete</a>
         <a onclick="showPage('donativos')">Donativos</a>
         <a onclick="showPage('contacto')" class="nav-btn">Contacto</a>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
       </nav>
     </div>
   </header>
@@ -1242,7 +1199,7 @@
 
       <p style="margin-top:28px; text-align:center; font-size:0.9rem; color:var(--muted);">
         La información bancaria es confidencial. Escríbenos a
-        <a href="mailto:laviolencianotienegenero@gmail.com" style="color:var(--blue-mid);">laviolencianotienegenero@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#1c707d6a75737079727f757d727368757972797b7972796e735c7b717d7570327f7371" style="color:var(--blue-mid);"><span class="__cf_email__" data-cfemail="dbb7baadb2b4b7beb5b8b2bab5b4afb2beb5bebcbeb5bea9b49bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></a>
       </p>
 
       <div class="facturar-section animate-on-scroll">
@@ -1274,7 +1231,7 @@
         <div class="contact-info-box">
           <div class="contact-info-icon">📧</div>
           <h4>Correo electrónico</h4>
-          <a href="mailto:laviolencianotienegenero@gmail.com">laviolencianotienegenero<br>@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#dab6bbacb3b5b6bfb4b9b3bbb4b5aeb3bfb4bfbdbfb4bfa8b59abdb7bbb3b6f4b9b5b7">laviolencianotienegenero<br>@gmail.com</a>
         </div>
         <div class="contact-info-box">
           <div class="contact-info-icon">📞</div>
@@ -1311,12 +1268,12 @@
   <footer>
     © 2025 LA VIOLENCIA NO TIENE GÉNERO A.C &nbsp;·&nbsp; Todos los derechos reservados &nbsp;·&nbsp;
     Atizápan de Zaragoza, Estado de México &nbsp;·&nbsp;
-    <a href="mailto:laviolencianotienegenero@gmail.com">laviolencianotienegenero@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#412d2037282e2d242f2228202f2e3528242f2426242f24332e01262c20282d6f222e2c"><span class="__cf_email__" data-cfemail="1d717c6b74727178737e747c737269747873787a7873786f725d7a707c7471337e7270">[email&#160;protected]</span></a>
   </footer>
 
 
   <!-- ══ SCRIPTS ══ -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function showPage(id) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       const target = document.getElementById('page-' + id);
@@ -1328,8 +1285,6 @@
         initAnimations();
         initCounters();
       }, 60);
-      document.querySelector('nav').classList.remove('open');
-document.querySelector('header').classList.remove('nav-mobile-open');
     }
 
     function initAnimations() {
@@ -1357,34 +1312,8 @@ document.querySelector('header').classList.remove('nav-mobile-open');
           let cur = 0;
           const inc = Math.ceil(tgt / 80);
 
-          const iv = setInterval(() => {
-            cur += inc;
-            if (cur >= tgt) {
-              el.innerText = prefix + tgt + suffix;
-              clearInterval(iv);
-            } else {
-              el.innerText = prefix + cur + suffix;
-            }
-          }, 18);
-          cObs.unobserve(el);
-        });
-      }, { threshold: 0.5 });
-      document.querySelectorAll('.page.active .counter').forEach(c => cObs.observe(c));
-    }
+          const iv = setInte
 
-    initAnimations();
-    initCounters();
-    
-    function toggleMenu() {
-  const nav = document.querySelector('nav');
-  const header = document.querySelector('header');
-  nav.classList.toggle('open');
-  header.classList.toggle('nav-mobile-open');
-}
-  </script>
-
-</body>
-</html>
 
 
 
