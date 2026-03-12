@@ -54,9 +54,8 @@
       padding: 0 20px;
       height: 90px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
-      gap: 16px;
     }
 
     .logo-area {
@@ -102,6 +101,31 @@
     }
 
     .nav-btn:hover { background: #1d4ed8 !important; }
+
+    /* ══ HAMBURGER ══ */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      flex-shrink: 0;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .nav-mobile-open .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-mobile-open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-mobile-open .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
     /* ══ PAGES ══ */
     .page { display: none; }
@@ -737,13 +761,40 @@
 
     .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
-    /* ══ RESPONSIVE ══ */
+    /* ══ RESPONSIVE ESCRITORIO ══ */
     @media (max-width: 1024px) {
       nav a { font-size: 0.68rem; padding: 5px 6px; }
       .site-name { font-size: 0.8rem; }
     }
 
+    /* ══ RESPONSIVE MÓVIL ══ */
     @media (max-width: 768px) {
+      /* Navbar */
+      .nav-container {
+        height: auto;
+        padding: 12px 20px;
+        justify-content: flex-start;
+        gap: 14px;
+      }
+      .logo { height: 140px; }
+      .hamburger { display: flex; }
+      nav {
+        display: none;
+        position: absolute;
+        top: 165px;
+        left: 0; right: 0;
+        background: linear-gradient(135deg, var(--purple-dark), var(--blue-strong));
+        flex-direction: column;
+        padding: 16px;
+        gap: 4px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        z-index: 999;
+      }
+      nav.open { display: flex; }
+      nav a { font-size: 0.9rem; padding: 10px 14px; border-radius: 8px; white-space: normal; }
+      body { padding-top: 165px; }
+
+      /* Resto de móvil */
       .hero-overlay h1 { font-size: 1.75rem; }
       .video-grid { grid-template-columns: 1fr; }
       .split-section { grid-template-columns: 1fr; }
@@ -753,62 +804,9 @@
       .timeline-item, .timeline-item:nth-child(even) { padding-right: 0; padding-left: 52px; justify-content: flex-start; }
       .timeline-dot { left: 20px; }
       .timeline-card { max-width: 100%; }
-      nav a { padding: 5px 6px; font-size: 0.68rem; }
       .site-name { font-size: 0.78rem; white-space: normal; }
-      .logo { height: 140px; }
-.nav-container { height: auto; padding: 16px 20px; }
-body { padding-top: 175px; }
       .nosotros-what-inner { grid-template-columns: 1fr; }
-      .nav-container { height: auto; padding: 12px 20px; }
-.logo { height: 120px; }
-body { padding-top: 110px; }
-      .hamburger { margin-left: 16px; }
     }
-
-    .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 6px;
-  background: none;
-  border: none;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.nav-mobile-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-mobile-open .hamburger span:nth-child(2) { opacity: 0; }
-.nav-mobile-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0; right: 0;
-    background: linear-gradient(135deg, var(--purple-dark), var(--blue-strong));
-    flex-direction: column;
-    padding: 16px;
-    gap: 4px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  }
-
-  nav.open { display: flex; }
-  nav a { font-size: 0.9rem; padding: 10px 14px; border-radius: 8px; }
-  .hamburger { display: flex; }
-  .nav-container { flex-direction: row; align-items: center; justify-content: flex-start; }
-.hamburger { display: flex; margin-left: 16px; }
-}
   </style>
 </head>
 
@@ -914,7 +912,6 @@ body { padding-top: 110px; }
     <div class="nosotros-what">
       <div class="nosotros-what-inner">
 
-        <!-- Bloque Propósito (nuevo texto) -->
         <div class="what-card animate-on-scroll">
           <p class="purpose-eyebrow">Propósito</p>
           <h3>¿Por qué existimos?</h3>
@@ -922,19 +919,16 @@ body { padding-top: 110px; }
           <p>Nuestra asociación se enfoca en colaborar con hombres que enfrentan denuncias falsas o situaciones de vulnerabilidad derivadas de conflictos personales con autoridades judiciales.</p>
         </div>
 
-        <!-- Lo que hacemos -->
         <div class="what-card animate-on-scroll">
           <h3>Lo que hacemos</h3>
           <p>Nuestra asociación proporciona apoyo legal y emocional a hombres que han sido víctimas de violencia doméstica o que enfrentan acusaciones falsas de violencia de género. Estamos comprometidos a brindarles el respaldo necesario para defender su inocencia y obtener justicia en un entorno seguro y comprensivo.</p>
         </div>
 
-        <!-- Nuestro compromiso -->
         <div class="what-card animate-on-scroll">
           <h3>Nuestro compromiso</h3>
           <p>Nuestros servicios legales y emocionales están diseñados para empoderar a los hombres que sufren en silencio, ayudándoles a superar las barreras legales y emocionales que enfrentan en situaciones de violencia doméstica y acusaciones injustas.</p>
         </div>
 
-        <!-- Texto original del hero como nuevo recuadro -->
         <div class="what-card animate-on-scroll">
           <h3>Nuestra postura</h3>
           <p>Nuestra asociación apoya a los hombres víctimas de maltrato, así como a aquellos que son injustamente acusados mediante denuncias falsas por violencia de género. Los inocentes no se conforman con una pena reducida ni buscan un acuerdo; luchan por demostrar su inocencia y obtener justicia. Estaremos a su lado para brindarles todo el apoyo necesario en su defensa.</p>
@@ -966,11 +960,10 @@ body { padding-top: 110px; }
   </div><!-- /nosotros -->
 
 
-  <!-- ══════════ PAGE: APOYO LEGAL + ASESORÍA (unificados) ══════════ -->
+  <!-- ══════════ PAGE: APOYO LEGAL + ASESORÍA ══════════ -->
   <div id="page-apoyo" class="page">
     <div class="inner-page">
 
-      <!-- Bloque 1: texto | imagen -->
       <div class="split-section animate-on-scroll">
         <div class="split-text">
           <span class="split-eyebrow">Nuestros servicios</span>
@@ -982,7 +975,6 @@ body { padding-top: 110px; }
         <div class="split-image" style="background-image: url('imagen-apoyo.jpg');"></div>
       </div>
 
-      <!-- Bloque 2: imagen | texto (intercalado — contenido de Asesoría) -->
       <div class="split-section animate-on-scroll">
         <div class="split-image" style="background-image: url('imagen-asesoria.jpg');"></div>
         <div class="split-text">
@@ -993,7 +985,6 @@ body { padding-top: 110px; }
         </div>
       </div>
 
-      <!-- Cards originales de Apoyo Legal (sin tocar) -->
       <div class="services-grid">
         <div class="service-card animate-on-scroll">
           <div class="service-icon">⚖️</div>
@@ -1180,15 +1171,12 @@ body { padding-top: 110px; }
       <h2>Síguenos</h2>
       <p>Mantente informado sobre próximos eventos, noticias y recursos en nuestras redes sociales.</p>
       <div class="social-buttons">
-        <!-- Facebook: LA VIOLENCIA NO TIENE GENERO A.C -->
         <a href="https://www.facebook.com/profile.php?id=61575893662600" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook
         </a>
-        <!-- Instagram: @lvntg_ac -->
         <a href="https://www.instagram.com/lvntg_ac/" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>Instagram
         </a>
-        <!-- X / Twitter: @LVNTGACmx -->
         <a href="https://x.com/LVNTGACmx" target="_blank" class="social-btn">
           <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>Twitter / X
         </a>
@@ -1301,7 +1289,6 @@ body { padding-top: 110px; }
         </div>
       </div>
 
-      <!-- Formulario Brevo -->
       <div class="animate-on-scroll" style="max-width:700px; margin:0 auto;">
         <iframe
           width="540" height="305"
@@ -1337,7 +1324,14 @@ body { padding-top: 110px; }
         initCounters();
       }, 60);
       document.querySelector('nav').classList.remove('open');
-document.querySelector('header').classList.remove('nav-mobile-open');
+      document.querySelector('header').classList.remove('nav-mobile-open');
+    }
+
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      const header = document.querySelector('header');
+      nav.classList.toggle('open');
+      header.classList.toggle('nav-mobile-open');
     }
 
     function initAnimations() {
@@ -1358,13 +1352,11 @@ document.querySelector('header').classList.remove('nav-mobile-open');
           if (!entry.isIntersecting) return;
           const el = entry.target;
           if (el.innerText !== '0') return;
-
           const tgt    = +el.getAttribute('data-target');
           const prefix = el.getAttribute('data-prefix') || '';
           const suffix = el.getAttribute('data-suffix') || '';
           let cur = 0;
           const inc = Math.ceil(tgt / 80);
-
           const iv = setInterval(() => {
             cur += inc;
             if (cur >= tgt) {
@@ -1382,17 +1374,11 @@ document.querySelector('header').classList.remove('nav-mobile-open');
 
     initAnimations();
     initCounters();
-    
-    function toggleMenu() {
-  const nav = document.querySelector('nav');
-  const header = document.querySelector('header');
-  nav.classList.toggle('open');
-  header.classList.toggle('nav-mobile-open');
-}
   </script>
 
 </body>
 </html>
+
 
 
 
